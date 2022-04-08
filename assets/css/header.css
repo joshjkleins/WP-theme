@@ -1,0 +1,166 @@
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+header {
+	height: 60px;
+	background-color: white;
+	transition: background-color, height 0.3s;
+	-webkit-box-shadow: 0px 6px 20px -7px #000000; 
+	box-shadow: 0px 6px 20px -7px #000000;
+	top: 0;
+}
+
+header.top {
+	height: 80px;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+
+header .inner-header {
+	max-width: 1300px;
+	padding: 0 20px;
+}
+
+header .inner-header img {
+	max-width: 250px;
+}
+
+header .inner-header ul a {
+	padding: 0 20px;
+	transition: color, background-color 0.3s;
+	text-decoration: none;
+	color: #001524;
+}
+
+header .inner-header ul a:hover {
+	color: white;
+	background-color: #001524;
+}
+
+header .hamburger-menu {
+	height: 100%;
+	align-items: center;
+	width: 30px;
+}
+
+header .hamburger-menu .inner {
+	position: relative;
+	height: 16px;
+	width: 100%;
+}
+
+header .hamburger-menu span {
+	position: absolute;
+	background-color: black;
+	height: 3px;
+	width: 100%;
+}
+
+header .hamburger-menu span:first-child { top: 0; }
+header .hamburger-menu span:nth-child(2) { top: 8px; }
+header .hamburger-menu span:last-child { top: 16px; }
+
+.mobile-menu {
+	top: 0;
+    right: -70%;
+    bottom: 0;
+    width: 70%;
+    background-color: white;
+    z-index: 55;
+    position: fixed;
+    transition: right 0.3s;
+    background-color: #15616D;
+    color: white;
+}
+
+.mobile-menu.active {
+	right: 0%;
+}
+
+.mobile-menu .top {
+	padding: 40px 10px 20px;
+}
+
+.mobile-menu .mobile-menu-title {
+	font-size: 24px;
+}
+
+.mobile-menu a {
+	padding: 15px 20px;
+	text-decoration: none;
+	color: white;
+	border-top: 1px solid white;
+	display: block;
+}
+
+.mobile-menu ul {
+	border-bottom: 1px solid white;
+	height: auto;
+}
+
+.mobile-menu .close-mobile {
+	color: white;
+	top: 15px;
+	right: 15px;
+	width: 15px;
+	height: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile-menu .close-mobile:after {
+	content: '';
+	height: 20px;
+	width: 2px;
+	transform: rotate(45deg);
+	background-color: white;
+	position: absolute;
+}
+
+.mobile-menu .close-mobile:before {
+	content: '';
+	height: 20px;
+	width: 2px;
+	transform: rotate(-45deg);
+	background-color: white;
+	position: absolute;
+}
+
+header .mobile-menu li {
+	padding: 8px 0;
+	border-bottom: 1px solid black;
+}
+
+header .mobile-menu li a {
+	text-decoration: none;
+	color: black;
+}
+
+.site-overlay.active {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 50;
+}
+
+@media(max-width: 767px) {
+	header, header.top {
+		height: 55px;
+	}
+
+	header .inner img {
+		max-width: 175px;
+	}
+}
